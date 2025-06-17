@@ -3,7 +3,3 @@
 3.r
 4.l
 5.d
-
-6.nihao
-7.hi
-8.dark
