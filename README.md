@@ -11,6 +11,7 @@ This project focuses on the classification of single cells using a ResNet50 mode
 
    :
 
+   - **Get ROI's masks**:Use cellpose to get the masks of target image files
    - **Single Cell Extraction**: Extract single cell images from input image data using provided masks.
    - **Image Padding**: Pad single cell images to a uniform size with zeros to ensure compatibility with the model.
 
@@ -58,11 +59,9 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Data Preparing
+### Data Pre - processing
 
 Use cellpose to get the masks of target image files
-
-### Data Pre - processing
 
 To pre - process the data, run the PreProcessing.py script:
 
