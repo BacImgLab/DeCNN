@@ -39,6 +39,7 @@ This project focuses on the classification of single cells using a ResNet50 mode
 - Scikit - image
 - TensorBoard
 - Psutil
+- CellPose2.0
 
 ## Installation
 
@@ -56,6 +57,10 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
+### Data Preparing
+
+Use cellpose to get the masks of target image files
 
 ### Data Pre - processing
 
@@ -83,6 +88,16 @@ This script will log the hardware information, set up the data augmentation, cre
 
 ### Cell Classification
 
+This is a example about how to classify DR:
+
+The format of the input file is as follows:
+
+Training\ExampleData\Prediction\
+
+
+
+![](F:\OXH\typora\tmp_images\image-20250722174735310.png)
+
 To classify single cells, run the DR_classification.py script:
 
 python
@@ -93,6 +108,10 @@ python DR_classification.py
 
 This script will guide you through setting up the parameters, selecting the input folder, extracting single cells, padding the images, and finally classifying the cells. The classification results will be saved in a CSV file in the input directory.
 
+
+
+
+
 ## Project Structure
 
 - PreProcessing.py: Contains functions for single cell extraction and padding.
@@ -100,7 +119,7 @@ This script will guide you through setting up the parameters, selecting the inpu
 - DR_classification.py: Implements the entire single cell classification workflow, from parameter setup to result saving.
 - `Model/`: Contains the ResNet50 model definition.
 - `runs/`: Stores the TensorBoard logs for model training.
-- `models/`: Saves the trained model parameters.
+- `Model/trained_parameters/`: Saves the trained model parameters.
 
 ## Contributing
 
